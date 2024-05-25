@@ -2,27 +2,42 @@
 // src/components/LoginForm.astro
 ---
 <style>
-    .container {
-      display: flex;
-      height: 100vh;
-    }
+ body{
+  background: #F8F8F8;
+ }
+  .cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    height: 90vh;
+    background: #ffffff;
+    border-radius: 15px;
+    
+    
+  }
+    
     .left-section {
       background: linear-gradient(180deg, #4C44D7 0%, #8E2B8D 100%);
       color: white;
-      width: 50%;
+      height: 80%;
+      width: 30%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 2rem;
+      border-radius: 15px;
     }
     .right-section {
       width: 50%;
+      height: 80%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      border-radius: 15px;
     }
     .logo {
       margin-bottom: 2rem;
@@ -68,6 +83,7 @@
   </style>
   
   <div class="container">
+    <div class="cont">
     <div class="left-section">
       <img src="../img/logo.png" alt="Logo" class="logo" />
       <h1 class="title">PUP</h1>
@@ -82,6 +98,7 @@
         <a href="/register">Registrarse</a>
       </form>
       <p class="footer">Copyright 2024 - 2025 Sena</p>
-    </div>
+   </div>
+  </div>
   </div>
   
