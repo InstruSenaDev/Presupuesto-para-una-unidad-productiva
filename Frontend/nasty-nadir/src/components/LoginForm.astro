@@ -1,7 +1,19 @@
 ---
 // src/components/LoginForm.astro
+
 ---
+
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
+
+*{
+ 
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  
  body{
   background: #F8F8F8;
  }
@@ -18,7 +30,7 @@
   }
     
     .left-section {
-      background: linear-gradient(180deg, #4C44D7 0%, #8E2B8D 100%);
+      background: linear-gradient(180deg, #4C44D7 0%, #d2d2d2 100%);
       color: white;
       height: 80%;
       width: 30%;
@@ -41,7 +53,11 @@
     }
     .logo {
       margin-bottom: 2rem;
+      height: 100px;
     }
+
+
+
     .title {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -81,13 +97,15 @@
       color: #888;
     }
   </style>
-  
+ 
   <div class="container">
     <div class="cont">
     <div class="left-section">
-      <img src="../img/logo.png" alt="Logo" class="logo" />
       <h1 class="title">PUP</h1>
-      <p>Presupuesto para una unidad productiva</p>
+      <img src="public/img/Logo.png" alt="Logo" class="logo" />
+      <p> Con la colaboración y el compromiso de todos,
+         podremos alcanzar objetivos 
+        y asegurar un crecimiento sostenible y rentable para nuestra organización.</p>
     </div>
     <div class="right-section">
       <h2>Iniciar sesión</h2>
