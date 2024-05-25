@@ -1,0 +1,87 @@
+---
+// src/components/LoginForm.astro
+---
+<style>
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .left-section {
+      background: linear-gradient(180deg, #4C44D7 0%, #8E2B8D 100%);
+      color: white;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .right-section {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      margin-bottom: 2rem;
+    }
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form input {
+      width: 300px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form button {
+      width: 320px;
+      padding: 1rem;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form a {
+      margin-top: 1rem;
+      color: #000;
+      text-decoration: none;
+    }
+    .form a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
+  
+  <div class="container">
+    <div class="left-section">
+      <img src="../img/logo.png" alt="Logo" class="logo" />
+      <h1 class="title">PUP</h1>
+      <p>Presupuesto para una unidad productiva</p>
+    </div>
+    <div class="right-section">
+      <h2>Iniciar sesión</h2>
+      <form class="form">
+        <input type="email" id="email" name="email" placeholder="Correo" required />
+        <input type="password" id="password" name="password" placeholder="Contraseña" required />
+        <a href="/dashboard"><button type="button">Iniciar sesión</button></a>
+        <a href="/register">Registrarse</a>
+      </form>
+      <p class="footer">Copyright 2024 - 2025 Sena</p>
+    </div>
+  </div>
+  
