@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pool": "^0.4.1",
+    "yarn": "^1.22.22"
   }
 }
