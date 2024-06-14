@@ -1,0 +1,45 @@
+---
+import Button from "../components/hRecuperarContraseña/button.astro";
+import Input from "../components/hRecuperarContraseña/input.astro";
+import Layout from "../layouts/Layout.astro";
+
+// src/pages/PagPrincipal.astro
+
+---
+
+
+
+
+    <Layout title="Confirmar Codigo">
+
+        <div class="container ml-auto mr-auto flex items-center justify-center  ">
+              
+      
+          <div class="w-full md:w-1/3">
+      
+              <form class=" bg- px-8 pt-6 pb-8 mb-4 bg-color1 h-3-/4 rounded mt-20 ">
+                  
+              <div class="mb-4">
+                  
+                  <div class="grid grid-flow-row sm:grid-flow-row-col gap-3 text-center">
+                      <h1  class="text-2xl ">Confirmar Codigo</h1>
+                      <h3>Ingresa tu correo para obtener el codigo de restablecer tu contraseña</h3>
+                  <Input type='text' placeholder='correo'/>
+                  <Button Text ="Obtener codigo "><a href="/"></a></Button>
+                  
+                  
+      
+                  </div>
+              </form>
+              </div>
+          
+          </div>
+      
+      
+       </div>
+      
+      
+      </Layout>
+      
+
+
