@@ -7,6 +7,7 @@ export default {
 			'color1':"#D9D9D9",
 			'color2':"#000000",
 			'color3':"#FFFFFF",
+			'color4':'#3835A3',
 		},
 		extend: {},
 	},
