@@ -8,6 +8,8 @@ export default {
 			'color2':"#000000",
 			'color3':"#FFFFFF",
 			'color4':'#3835A3',
+			'colorFondoInicio':"#F8F8F8",
+			'color6':"#9E9E9E",
 		},
 		extend: {},
 	},
