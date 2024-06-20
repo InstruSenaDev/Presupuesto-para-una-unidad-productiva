@@ -2,6 +2,12 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		fontFamily:{
+			fontFamily: {
+				'zen-kaku-gothic-new': ['"Zen Kaku Gothic New"', 'sans-serif'],
+			  },
+			  
+		},
 
 		colors:{
 			'color1':"#D9D9D9",

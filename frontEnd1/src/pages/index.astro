@@ -1,7 +1,10 @@
 ---
+import type { string } from "astro/zod";
 import Button from "../components/hRecuperarContraseña/button.astro";
 import Input from "../components/hRecuperarContraseña/input.astro";
 import Layout from "../layouts/Layout.astro";
+import Inicio from "./inicio.astro";
+
 
 // src/pages/PagPrincipal.astro
 
@@ -9,56 +12,6 @@ import Layout from "../layouts/Layout.astro";
 //responsividad: flex  flex-col md:flex-row
 ---
 
-<Layout title="PUP">
-    <body >
-        
-     
-          
-        <div
-            class="contM  ml-auto mr-auto  justify-center  mt-16 pt-3 flex  flex-col md:flex-row "
-        >
-      
-            <div class="cont1 px-8 grid justify-items-center bg-color4 w-auto  rounded-s-lg 
-          text-color1  flex-col  items-center "
-            >
-                <h1 class="text-2xl">PUP</h1>
-                <img
-                    class="h-26 w-28"
-                    src="../../public/img/logoPUP.png"
-                    alt=""
-                />
-                <p>Presupuesto para unidades productivas</p>
-            </div>
-
-            <div class="cont2 px-8 grid justify-items-center bg-color1w-auto  
-          text-color1  flex-col  items-center bg-color3 rounded-e-xl ">
-                <form class="contform px-8 pt-6 pb-8 bg  ">
-                    <div
-                        class="conthf m-4 grid grid-flow-row sm:grid-flow-row-col gap-3 text-center bg-color3 "
-                    >
-                        <h1 class="text-2xl text-color2">Inicio sesión</h1>
-
-                        <div class="w-auto">
-                            <Input type="text" placeholder="correo" />
-                            <Input type="text" placeholder="Contraseña" />
-                        </div>
-
-                        <a href="/ObtenerCodigo">
-                            <Button  Text="Iniciar sesión " />
-                        </a>
-
-                        <a href="/"
-                            ><h1 class="text-lg underline text-color2">Registrarse</h1></a
-                        >
-                        <a href=""><p class="text-color2">¿Olvidaste Contraseña?</p></a>
-                        <p class="text-color6 ">Copyright 2024 - 2025 Sena</p>
-                    </div>
-                    
-                </form>
-                
-            </div>
-            
-        </div>
-        
-    </body>
+<Layout title="inicio">
+   <Inicio/>
 </Layout>
