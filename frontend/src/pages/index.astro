@@ -1,18 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import LoginForm from '../components/LoginForm.astro';
+import type { string } from "astro/zod";
+import Button from "../components/hRecuperarContraseña/button.astro";
+import Input from "../components/hRecuperarContraseña/input.astro";
+import Layout from "../layouts/Layout.astro";
+import Inicio from "./inicio.astro";
+
+
+// src/pages/PagPrincipal.astro
+
+
+//responsividad: flex  flex-col md:flex-row
 ---
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión</title>
-    
-  </head>
-  <body>
-    <LoginForm />
-  </body>
-</html>
 
-
+<Layout title="inicio">
+   <Inicio/>
+</Layout>
