@@ -1,8 +1,9 @@
 ---
-import type { string } from "astro/zod";
-import Button from "../components/hRecuperarContraseña/button.astro";
-import Input from "../components/hRecuperarContraseña/input.astro";
-import Layout from "../layouts/Layout.astro";
+
+import Layout from "../../layouts/Layout.astro";
+import Input from "../hRecuperarContraseña/input.astro";
+import Button from "../hRecuperarContraseña/button.astro";
+
 
 // src/pages/PagPrincipal.astro
 
@@ -37,7 +38,7 @@ import Layout from "../layouts/Layout.astro";
                     <div
                         class="conthf m-4 grid grid-flow-row sm:grid-flow-row-col gap-3 text-center bg-color3 "
                     >
-                        <h1 class="text-2xl text-color2">Registro de terceros   </h1>
+                        <h1 class="text-2xl text-color2">Registro </h1>
 
                         <div class="w-auto">
                             <Input placeholder="Nombre" id="c4" type="text"  />
@@ -52,10 +53,13 @@ import Layout from "../layouts/Layout.astro";
                             <Input placeholder="Numero" id="c6" type="text" />
 
                         </div>
+                        
+                    
+                    <a href="/?">
+                        <Button  Text="Registrarse" />
+                    </a>
 
-                       <a href="/index" class="text-color2">ingresar</a>
 
-                       
                        
                         
                     </div>
