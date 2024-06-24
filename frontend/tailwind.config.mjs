@@ -7,6 +7,9 @@ export default {
 			'blanquito' : '#FFFFFF',
 			'rosadito': '#9747FF',
 		},
+		// spacing:{
+
+		// },
 		extend: {},
 	},
 	plugins: [],
