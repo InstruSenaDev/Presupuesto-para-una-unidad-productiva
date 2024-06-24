@@ -1,11 +1,8 @@
 ---
 // src/pages/dashboard.astro
-import Sidebar from '../components/siderbarDashboard/SidebarDas.astro';
-import Header from '../components/siderbarDashboard/HeaderDas.astro';
-import Dashboard from '../components/siderbarDashboard/DashboardDas.astro';
-import SidebarDas from '../components/siderbarDashboard/SidebarDas.astro';
-import DealsTableDas from '../components/siderbarDashboard/DealsTableDas.astro';
-
+import Sidebar from '../components/Sidebar.astro';
+import Header from '../components/Header.astro';
+import Dashboard from '../components/Dashboard.astro';
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -15,17 +12,8 @@ import DealsTableDas from '../components/siderbarDashboard/DealsTableDas.astro';
     <title>Dashboard</title>
   </head>
   <body>
-    
+    <Sidebar />
+    <Header />
     <Dashboard />
-    <div class="flex">
-      
-      <SidebarDas/>
-      <div>
-        <Header />
-        <DealsTableDas/>
-      </div>
-      
-    </div>
-    
-  </body> 
+  </body>
 </html>
