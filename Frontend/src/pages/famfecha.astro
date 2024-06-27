@@ -1,0 +1,40 @@
+---
+// Formulario.astro
+import Layout from '../layouts/FamiliarFecha.astro';
+---
+
+<Layout>
+  <div class="flex justify-center items-center min-h-screen bg-gray-50">
+    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+      <h2 class="text-center text-2xl font-bold mb-6 bg-Morado w-full">Fecha e ingresos</h2>
+      
+      <form>
+        <div class="mb-4">
+          <label for="mes" class="block text-sm font-medium text-gray-700">Mes:</label>
+          <input type="text" id="mes" name="mes" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+        </div>
+
+        <div class="mb-4">
+          <label for="anio" class="block text-sm font-medium text-gray-700">Año:</label>
+          <input type="text" id="anio" name="anio" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+        </div>
+
+        <div class="mb-4">
+          <label for="salario" class="block text-sm font-medium text-gray-700">Salario:</label>
+          <div class="relative mt-1">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">$</span>
+            <input type="text" id="salario" name="salario" class="pl-7 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mb-4">
+          <button type="button" class="py-2 px-4 bg-black text-white font-medium rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Añadir más</button>
+        </div>
+
+        <div class="flex justify-center">
+          <button type="submit" class="py-2 px-4 bg-black text-white font-medium rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Siguiente</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</Layout>
