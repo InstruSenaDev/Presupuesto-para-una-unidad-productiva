@@ -4,13 +4,14 @@ import Button from "../hRecuperarContraseña/button.astro";
 import Layout from "../../layouts/Layout.astro";
 import Input from "../hRecuperarContraseña/input.astro";
 
+  
 // src/pages/PagPrincipal.astro
-
 //responsividad: flex  flex-col md:flex-row
+
 ---
 
 <Layout title="PUP">
-  <div class="contM justify-center flex flex-col md:flex-row mx-20">
+  <div class="contM justify-center flex flex-col md:flex-row mx-20 ">
     <div
       class="contM justify-center pt-3 flex flex-col md:flex-row h-screen w-full items-center"
     >
@@ -27,20 +28,24 @@ import Input from "../hRecuperarContraseña/input.astro";
         class="cont2 px-8 grid justify-items-center bg-color1w-auto
               text-color1 flex-col items-center bg-color3 rounded-e-xl h-5/6 w-full "
       >
-        <form class="contform px-8 pt-6 pb-8  ">
+        <form id="loginForm" class="contform px-8 pt-6 pb-8 bg-color1">
           <div
             class="conthf m-4 grid grid-flow-row sm:grid-flow-row-col gap-3 text-center bg-color3 "
           >
-            <h1 class="text-2xl text-color2">Inicio sesion</h1>
+            <h1 class="text-2xl text-color2">Inicio sesión</h1>
 
             <div class="w-auto">
-              <Input placeholder="Correo" id="c1" type="text" />
-              <Input placeholder="Contraseña" id="c2" type="text" />
+              <div class="input-group flex-col">*
+                <Input placeholder="Correo" id="correo" type="text" />
+                <p id="correo-error" class=" text-color7 text-xs "></p>
+              </div>
+              <div class="input-group flex-col">
+                <Input placeholder="Contraseña" id="contrasena" type="password" />
+                <p id="contrasena-error" class=" text-color7 text-xs  "></p>
+              </div>
             </div>
-            <a href="/">
-              <Button Text="Iniciar sesion" />
-            </a>
-            <a href=""><h1 class="text-color2 underline">Registrarse</h1></a>
+            <Button type="submit" Text="Iniciar sesión" id="submit" />
+            <a href="#"><h1 class="text-color2 underline text-2xl">Registrarse</h1></a>
           </div>
           <p class="text-color6 text-sm text-center">
             Copyright 2024 - 2025 Sena
@@ -49,4 +54,40 @@ import Input from "../hRecuperarContraseña/input.astro";
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('loginForm');
+      const correo = document.getElementById('correo');
+      const contrasena = document.getElementById('contrasena');
+      const correoError = document.getElementById('correo-error');
+      const contrasenaError = document.getElementById('contrasena-error');
+      
+      form.addEventListener('submit', function (event) {
+        let valid = true;
+        
+        // Limpiar mensajes de error
+        correoError.textContent = '';
+        contrasenaError.textContent = '';
+        
+        // Validación de correo
+        const correoValue = correo.value;
+        if (!correoValue || !/\S+@\S+\.\S+/.test(correoValue)) {
+          valid = false;
+          correoError.textContent = 'Por favor, ingrese un correo electrónico válido.';
+        }
+        
+        // Validación de contraseña
+        const contrasenaValue = contrasena.value;
+        if (!contrasenaValue || contrasenaValue.length < 8) {
+          valid = false;
+          contrasenaError.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+        }
+        
+        if (!valid) {
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+ 
 </Layout>
