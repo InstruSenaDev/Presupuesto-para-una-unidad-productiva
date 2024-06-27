@@ -1,6 +1,8 @@
 ---
-import Fecha from "../components/Empresarial/Fecha.astro";
+import EmpresarialFecha from "../components/Empresarial/Fecha/EmpresarialFecha.astro";
+import InputsFecha from "../components/Empresarial/Inputs/Inputs Fecha/InputsFecha.astro";
 import NavbarEmpresarial from "../components/Empresarial/Navbar/NavbarEmpresarial.astro";
+import Navbar from "../layouts/Navbar.astro";
 ---
 
 <!doctype html>
@@ -10,12 +12,15 @@ import NavbarEmpresarial from "../components/Empresarial/Navbar/NavbarEmpresaria
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  
   <body>
     <div>
-      <NavbarEmpresarial />
+
+      <NavbarEmpresarial/>
     </div>
     <div class=" p-40 px-96 ">
-      <Fecha />
+      <EmpresarialFecha />
+      <InputsFecha/>
     </div>
   </body>
 </html>

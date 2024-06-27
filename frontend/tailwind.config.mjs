@@ -6,6 +6,7 @@ export default {
 			'blueUwu' : '#322FA0',
 			'blanquito' : '#FFFFFF',
 			'rosadito': '#9747FF',
+			'gris': '#C9C9C9',
 		},
 		// spacing:{
 
