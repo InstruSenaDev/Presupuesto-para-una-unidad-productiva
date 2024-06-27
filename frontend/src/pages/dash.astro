@@ -1,31 +1,27 @@
 ---
 // src/pages/dashboard.astro
-import Sidebar from '../components/siderbarDashboard/SidebarDas.astro';
-import Header from '../components/siderbarDashboard/HeaderDas.astro';
-import Dashboard from '../components/siderbarDashboard/DashboardDas.astro';
-import SidebarDas from '../components/siderbarDashboard/SidebarDas.astro';
-import DealsTableDas from '../components/siderbarDashboard/DealsTableDas.astro';
 
+import Header from "../components/siderbarDashboard/HeaderDas.astro";
+import Dashboard from "../components/siderbarDashboard/DashboardDas.astro";
+import SidebarDas from "../components/siderbarDashboard/SidebarDas.astro";
+import DealsTableDas from "../components/siderbarDashboard/DealsTableDas.astro";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
   </head>
   <body>
-    
+    <Header />
     <Dashboard />
-    <div class="flex">
-      
-      <SidebarDas/>
-      <div>
-        <Header />
-        <DealsTableDas/>
-      </div>
-      
-    </div>
+    <SidebarDas />
+    <DealsTableDas />
     
-  </body> 
+
+   
+    
+  </body>
 </html>

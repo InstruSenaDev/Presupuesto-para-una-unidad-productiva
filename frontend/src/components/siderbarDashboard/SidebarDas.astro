@@ -1,29 +1,69 @@
-<div class="w-64 bg-Morado text-white min-h-screen p-4">
-  <div class="flex items-center justify-center mb-8">
-    <img src="../../../public/img/LOGO PUP(1).png" alt="PUP Logo" class="h-10">
-  </div>
-  <nav>
-    <ul>
-      <li class="flex items-center mb-4 p-2 space-x-2">
-        <img src="../../../public/img/home1.png" class="w-6 h-6 mr-2">
-        <span class="text-lg">Inicio</span>
-      </li>
-      <li class="flex items-center mb-4 p-2 space-x-2">
-        <img src="../../../public/img/empresarial.png" class="w-6 h-6 mr-2">
-        <span class="text-lg">Empresarial</span>
-      </li>
-      <li class="flex items-center mb-4 p-2 space-x-2">
-        <img src="../../../public/img/familiar.png" class="w-6 h-6 mr-2">
-        <span class="text-lg">Familiar</span>
-      </li>
-      <li class="flex items-center mb-4 p-2 space-x-2">
-        <img src="../../../public/img/personal.png" class="w-6 h-6 mr-2">
-        <span class="text-lg">Personal</span>
-      </li>
-      <li class="fixed bottom-0 left-0 p-2 mb-4">
-        <img src="../../../public/img/salir.png" class="w-6 h-6 mr-2 text-red-500">
-        <span class="text-lg">Salir</span>
-      </li>
-    </ul>
-  </nav>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Tailwind CSS classes */
+        .sidebar-minimized {
+            width: 4rem; /* equivalent to w-16 in Tailwind CSS */
+        }
+        .sidebar-minimized .sidebar-menu li a {
+            display: none;
+        }
+        .sidebar-minimized .sidebar-menu li::before {
+            content: attr(data-tooltip);
+            color: white;
+            display: block;
+            text-align: center;
+        }
+        #sidebar {
+            position: fixed;
+            z-index: 1000;
+        }
+        #main-content {
+            margin-left: 16rem; /* equivalent to w-64 in Tailwind CSS */
+            transition: margin-left 0.3s;
+        }
+        .sidebar-minimized + #main-content {
+            margin-left: 4rem; /* equivalent to w-16 in Tailwind CSS */
+        }
+    </style>
+</head>
+
+    <div id="sidebar" class="w-64 h-screen bg-blueUwu text-white transition-all duration-300 f">
+        <div class="flex justify-end p-2.5 bg-gray-700">
+            <button id="toggleBtn" class="bg-none border-none text-white text-2xl cursor-pointer">☰</button>
+        </div>
+        <ul class="sidebar-menu list-none p-0">
+            <li class="p-3.5" data-tooltip="Home">
+                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Inicio</a></li>
+            <li class="p-3.5" data-tooltip="About">
+                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Personal</a></li>
+            <li class="p-3.5" data-tooltip="Services">
+                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Familiar</a></li>
+            <li class="p-3.5" data-tooltip="Contact">
+                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Empresarial</a></li>
+            <li class="p-3.5" data-tooltip="Contact">
+                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Salir</a></li>
+        </ul>
+    </div>
+    <!-- <div id="main-content" class="p-4"> -->
+        <!-- Aquí va el contenido principal -->
+        <!-- <h1>Contenido Principal</h1>
+        <p>Este es el contenido principal que se verá a la derecha del sidebar.</p>
+    </div> -->
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-minimized');
+            mainContent.classList.toggle('sidebar-minimized');
+        });
+    </script>
+
+</html>

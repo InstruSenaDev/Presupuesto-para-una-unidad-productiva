@@ -1,159 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .main {
-            flex: 1;
-            padding: 150px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .user-info img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .table-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-
-        .status-Activo {
-            color: green;
-        }
-
-        .status-Inactivo {
-            color: red;
-        }
-
-        .status-rejected {
-            color: rgba(255, 168, 6, 0.815);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">  
-        </div>
-        <div class="main">
-            <div class="header">
-                <div>
-                    <h2>Detalles del cliente</h2>
-                </div>
-                
-            </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre cliente</th>
-                            <th>Direccion</th>
-                            <th>Fecha - Tiempo</th>
-                            <th>ID</th>
-                            <th>Presupuesto</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Armando casas Gutierrez</td>
-                            <td>Palmira</td>
-                            <td>11.09.2019 - 12.53 PM</td>
-                            <td>42.25</td>
-                            <td>$1.234,295</td>
-                            <td class="status-Activo">Activo</td>
-                        </tr>
-                        <tr>
-                            <td>Bryant Myers Ocoro</td>
-                            <td>Cali</td>
-                            <td>30.01.2019 - 06.52 PM</td>
-                            <td>42.26</td>
-                            <td>$6.835,395</td>
-                            <td class="status-Inactivo">Inactivo</td>
-                        </tr>
-                        <tr>
-                            <td>El gamin Gimenez</td>
-                            <td>Pradera</td>
-                            <td>12.10.2020 - 11.20 PM</td>
-                            <td>42.27</td>
-                            <td>$10.234,165</td>
-                            <td class="status-Activo">Activo</td>
-                        </tr>
-                        <tr>
-                            <td>Armando Broncas Garcia </td>
-                            <td>Tumaco</td>
-                            <td>24.03.2020 - 04:32 PM</td>
-                            <td>42.28</td>
-                            <td>$8.234,295</td>
-                            <td class="status-Inactivo">Inactivo</td>
-                        </tr>
-                        <tr>
-                            <td>Aide Piña Prado</td>
-                            <td>Popayan</td>
-                            <td>21.08.2021 - 07:53 PM</td>
-                            <td>42.29</td>
-                            <td>$22.104,295</td>
-                            <td class="status-Activo">Activo</td>
-                        </tr>
-                        <tr>
-                            <td>Eldo mingo Figueroa</td>
-                            <td>Cali</td>
-                            <td>12.04.2021 - 10:56 AM</td>
-                            <td>42.30</td>
-                            <td>$11.500,200</td>
-                            <td class="status-Inactivo">Inactivo</td>
-                        </tr>
-                        <tr>
-                            <td>Lola mento Martinez</td>
-                            <td>Palmira</td>
-                            <td>28.09.2022 - 01:45 AM</td>
-                            <td>42.31</td>
-                            <td>$1.200,300</td>
-                            <td class="status-Activo">Activo</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+<body class="font-sans bg-gray-200">
+  <div class="container mx-auto px-4 py-8"> <div class="header flex justify-between items-center mb-8">
+      <h2>Detalles del cliente</h2>
     </div>
+    <div class=" fle table-container bg-white p-4 rounded-md shadow-sm">
+      <table class="w-full border-collapse">
+        <thead>
+          <tr>
+            <th class="bg-gray-100 text-left font-bold px-4 py-2">Nombre cliente</th>
+            <th class="text-left px-4 py-2">Direccion</th>
+            <th class="text-left px-4 py-2">Fecha - Tiempo</th>
+            <th class="text-left px-4 py-2">ID</th>
+            <th class="text-left px-4 py-2">Presupuesto</th>
+            <th class="text-left px-4 py-2">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
