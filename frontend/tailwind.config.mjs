@@ -7,6 +7,7 @@ export default {
 			'blanquito' : '#FFFFFF',
 			'rosadito': '#9747FF',
 			'gris': '#C9C9C9',
+			'negro': '#000000',
 		},
 		// spacing:{
 
