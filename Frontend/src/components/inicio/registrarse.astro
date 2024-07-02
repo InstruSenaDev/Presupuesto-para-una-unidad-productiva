@@ -5,12 +5,11 @@ import Button from "../hRecuperarContraseña/button.astro";
 //responsividad: flex  flex-col md:flex-row
 ---
 
-
 <Layout title="Registro">
   <head>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
-  <div class="contM justify-center flex flex-col md:flex-row">
+  <div class="contM justify-center flex flex-col md:flex-row ">
     <div class="contM justify-center pt-3 flex flex-col md:flex-row h-screen w-full items-center ">
       <div class="cont1 px-8 grid justify-items-center bg-color4 h-5/6 rounded-s-lg text-color1 flex-col items-center">
         <h1 class="text-2xl">PUP</h1>
@@ -64,16 +63,19 @@ import Button from "../hRecuperarContraseña/button.astro";
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const formu = document.getElementById('formu');
-      const nombre = document.getElementById('registroNombre');
-      const correoRegistro = document.getElementById('CorreoRegistro');
-      const contrasenaRegistro = document.getElementById('ContraseñaRegistro');
-      const numeroDc = document.getElementById('numeroDc');
-      const nombreError = document.getElementById('nombreError');
-      const correoError = document.getElementById('correoError');
-      const contrasenaError = document.getElementById('contrasenaError');
-      const numeroDcError = document.getElementById('numeroDcError');
-      const togglePassword = document.getElementById('togglePassword');
+      const formu = document.getElementById('formu') as HTMLFormElement;
+      const nombre = document.getElementById('registroNombre') as HTMLInputElement;
+      const correoRegistro = document.getElementById('CorreoRegistro') as HTMLInputElement;
+      const contrasenaRegistro = document.getElementById('ContraseñaRegistro') as HTMLInputElement;
+      const numeroDc = document.getElementById('numeroDc') as HTMLInputElement;
+      const nombreError = document.getElementById('nombreError') as HTMLElement;
+      const correoError = document.getElementById('correoError') as HTMLElement;
+      const contrasenaError = document.getElementById('contrasenaError') as HTMLElement;
+      const numeroDcError = document.getElementById('numeroDcError') as HTMLElement;
+      const togglePassword = document.getElementById('togglePassword') as HTMLElement;
+
+      // Resetear el formulario
+      formu.reset();
 
       // Toggle password visibility
       togglePassword.addEventListener('click', function() {
@@ -113,7 +115,7 @@ import Button from "../hRecuperarContraseña/button.astro";
 
         // Validación del número de documento
         const numeroDcValue = numeroDc.value;
-        if (!numeroDcValue || isNaN(numeroDcValue)) {
+        if (!numeroDcValue || isNaN(parseInt(numeroDcValue))) {
           valid = false;
           numeroDcError.textContent = 'Ingrese un número de documento válido.';
         }
@@ -122,6 +124,13 @@ import Button from "../hRecuperarContraseña/button.astro";
           event.preventDefault();
         }
       });
+    });
+
+    window.addEventListener('pageshow', function(event) {
+      const formu = document.getElementById('formu') as HTMLFormElement;
+      if (event.persisted) {
+        formu.reset();
+      }
     });
   </script>
 </Layout>
