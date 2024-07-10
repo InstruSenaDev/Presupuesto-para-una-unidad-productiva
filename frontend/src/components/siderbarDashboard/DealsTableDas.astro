@@ -7,24 +7,69 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="font-sans bg-gray-200">
-  <div class="container mx-auto px-4 py-8"> <div class="header flex justify-between items-center mb-8">
+  <div class="container mx-auto pl-32 py-8">
+    <div class="header flex justify-between items-center mb-8">
       <h2>Detalles del cliente</h2>
     </div>
-    <div class=" fle table-container bg-white p-4 rounded-md shadow-sm">
-      <table class="w-full border-collapse">
-        <thead>
-          <tr>
-            <th class="bg-gray-100 text-left font-bold px-4 py-2">Nombre cliente</th>
-            <th class="text-left px-4 py-2">Direccion</th>
-            <th class="text-left px-4 py-2">Fecha - Tiempo</th>
-            <th class="text-left px-4 py-2">ID</th>
-            <th class="text-left px-4 py-2">Presupuesto</th>
-            <th class="text-left px-4 py-2">Estado</th>
-          </tr>
-        </thead>
-        <tbody>
-          </tbody>
-      </table>
+    <div class="flex flex-col">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-1 align-middle bg-white shadow-sm rounded-lg overflow-hidden">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr>
+                <th class="text-left px-4 py-2">Nombre</th>
+                <th class="text-left px-4 py-2">Lugar</th>
+                <th class="text-left px-4 py-2">Telefono</th>
+                <th class="text-left px-4 py-2">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-2 border">Juan Pérez</td>
+                <td class="px-4 py-2 border">Cali</td>
+                <td class="px-4 py-2 border">317-321-123</td>
+                <td class="px-4 py-2 border">Activo</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">María Gómez</td>
+                <td class="px-4 py-2 border">Candelaria</td>
+                <td class="px-4 py-2 border">320-432-234</td>
+                <td class="px-4 py-2 border">Inactivo</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">Armando casas</td>
+                <td class="px-4 py-2 border">Yotoco</td>
+                <td class="px-4 py-2 border">315-543-345</td>
+                <td class="px-4 py-2 border">Activo</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">Lucia vargas</td>
+                <td class="px-4 py-2 border">Palmira</td>
+                <td class="px-4 py-2 border">315-543-345</td>
+                <td class="px-4 py-2 border">Inactivo</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">Andrea jaramillo</td>
+                <td class="px-4 py-2 border">Buga</td>
+                <td class="px-4 py-2 border">318-442-145</td>
+                <td class="px-4 py-2 border">Activo</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">natalia zalazar</td>
+                <td class="px-4 py-2 border">Jamundi</td>
+                <td class="px-4 py-2 border">322-592-645</td>
+                <td class="px-4 py-2 border">Inactivo</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border">Gerardo gonzalez</td>
+                <td class="px-4 py-2 border">Ginebra</td>
+                <td class="px-4 py-2 border">314-545-845</td>
+                <td class="px-4 py-2 border">Activo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </body>

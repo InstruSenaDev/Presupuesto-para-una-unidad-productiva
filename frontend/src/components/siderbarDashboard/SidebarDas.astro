@@ -32,29 +32,30 @@
         }
     </style>
 </head>
-
-    <div id="sidebar" class="w-64 h-screen bg-blueUwu text-white transition-all duration-300 f">
+<body>
+    <div id="sidebar" class="w-64 h-screen bg-blue-900 text-white transition-all duration-300">
         <div class="flex justify-end p-2.5 bg-gray-700">
             <button id="toggleBtn" class="bg-none border-none text-white text-2xl cursor-pointer">☰</button>
         </div>
         <ul class="sidebar-menu list-none p-0">
-            <li class="p-3.5" data-tooltip="Home">
-                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Inicio</a></li>
-            <li class="p-3.5" data-tooltip="About">
-                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Personal</a></li>
-            <li class="p-3.5" data-tooltip="Services">
-                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Familiar</a></li>
-            <li class="p-3.5" data-tooltip="Contact">
-                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Empresarial</a></li>
-            <li class="p-3.5" data-tooltip="Contact">
-                <div class=" hover:bg-rosadito w-full flex items-center"><a href="#" class=" hover:bg-rosadito w-full text-blanquito no-underline">Salir</a></li>
+            <li class="p-3.5 w-full flex items-center" data-tooltip="Inicio">
+                <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Inicio</a>
+            </li>
+            <li class="p-3.5 w-full flex items-center" data-tooltip="Personal">
+                <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Personal</a>
+            </li>
+            <li class="p-3.5 w-full flex items-center" data-tooltip="Familiar">
+                <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Familiar</a>
+            </li>
+            <li class="p-3.5 w-full flex items-center" data-tooltip="Empresarial">
+                <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Empresarial</a>
+            </li>
+            <li class="p-3.5 w-full flex items-center" data-tooltip="Salir">
+                <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Salir</a>
+            </li>
         </ul>
     </div>
-    <!-- <div id="main-content" class="p-4"> -->
-        <!-- Aquí va el contenido principal -->
-        <!-- <h1>Contenido Principal</h1>
-        <p>Este es el contenido principal que se verá a la derecha del sidebar.</p>
-    </div> -->
+   
 
     <script>
         const toggleBtn = document.getElementById('toggleBtn');
@@ -65,5 +66,5 @@
             mainContent.classList.toggle('sidebar-minimized');
         });
     </script>
-
+</body>
 </html>
