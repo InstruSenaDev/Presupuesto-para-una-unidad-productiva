@@ -9,6 +9,7 @@ export default {
 				'zen-kaku-gothic-new': ['"Zen Kaku Gothic New"', 'sans-serif'],
 			  },
 			  
+			  
 		},
 
 		colors:{
