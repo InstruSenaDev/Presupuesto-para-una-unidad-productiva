@@ -60,7 +60,25 @@ import Button from "../hRecuperarContraseña/button.astro";
       </div>
     </div>
   </div>
+  <script type="module">
+    import { supabase } from '/clienteSupaBase.js';
+    const formu = document.getElementById('formu');
+    formu.addEventListener('submit', async (event)=>{
+      event.preventDefault()
+      const correo = event.target.correo.value
+      const contraseña = event.target.correo.value
 
+      const { user, error} = await supabase.auth.signUp({correo ,contraseña})
+        if (error){
+          alert (error.message)
+        }else {
+          alert('registro exitoso')
+        }
+      
+
+    });
+    
+    </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const formu = document.getElementById('formu') as HTMLFormElement;
