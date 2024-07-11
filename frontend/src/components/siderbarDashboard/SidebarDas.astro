@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,52 +11,47 @@
         .sidebar-minimized {
             width: 4rem; /* equivalent to w-16 in Tailwind CSS */
         }
+
         .sidebar-minimized .sidebar-menu li a {
             display: none;
         }
+
         .sidebar-minimized .sidebar-menu li::before {
             content: attr(data-tooltip);
             color: white;
             display: block;
             text-align: center;
         }
-        #sidebar {
-            position: fixed;
-            z-index: 1000;
-        }
-        #main-content {
-            margin-left: 16rem; /* equivalent to w-64 in Tailwind CSS */
-            transition: margin-left 0.3s;
-        }
-        .sidebar-minimized + #main-content {
-            margin-left: 4rem; /* equivalent to w-16 in Tailwind CSS */
-        }
     </style>
 </head>
+
 <body>
-    <div id="sidebar" class="w-64 h-screen bg-blue-900 text-white transition-all duration-300">
-        <div class="flex justify-end p-2.5 bg-gray-700">
+    <div id="sidebar" class="fixed z-1000 w-64 h-screen bg-Morado text-white transition-all duration-300">
+        <div class="flex justify-end p-2.5 bg-Morado">
             <button id="toggleBtn" class="bg-none border-none text-white text-2xl cursor-pointer">☰</button>
         </div>
         <ul class="sidebar-menu list-none p-0">
-            <li class="p-3.5 w-full flex items-center" data-tooltip="Inicio">
+            <li class="p-3.5 w-full flex items-center" >
                 <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Inicio</a>
             </li>
-            <li class="p-3.5 w-full flex items-center" data-tooltip="Personal">
+            <li class="p-3.5 w-full flex items-center" >
                 <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Personal</a>
             </li>
-            <li class="p-3.5 w-full flex items-center" data-tooltip="Familiar">
+            <li class="p-3.5 w-full flex items-center" >
                 <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Familiar</a>
             </li>
-            <li class="p-3.5 w-full flex items-center" data-tooltip="Empresarial">
+            <li class="p-3.5 w-full flex items-center" >
                 <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Empresarial</a>
             </li>
-            <li class="p-3.5 w-full flex items-center" data-tooltip="Salir">
+            <li class="p-3.5 w-full flex items-center" >
                 <a href="#" class="w-full text-white no-underline hover:bg-pink-500 hover:text-white">Salir</a>
             </li>
         </ul>
     </div>
-   
+
+    <div id="main-content" class="ml-64 transition-all duration-300">
+        <!-- Main content here -->
+    </div>
 
     <script>
         const toggleBtn = document.getElementById('toggleBtn');
@@ -67,4 +63,5 @@
         });
     </script>
 </body>
+
 </html>
