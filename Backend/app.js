@@ -1,24 +1,26 @@
-const express = require("express");
+// Backend/app.js
+import express from 'express';
+import cors from 'cors';
+import dataRoutes from './routes/dataroutes.js';
+
 const app = express();
-const swaggerUi = require('swagger-ui-express');
-const yaml = require('js-yaml');
-const fs = require('fs')
-const dataRoutes = require("./dataRoutes.js")
-const cors = require("cors"); // Importa el middleware cors
+const PORT = 4000;
 
-// Configuracion de Swagger
-
-const swaggerDocument = yaml.load(fs.readFileSync('./swagger.yaml', 'utf-8'));
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
-// Configuración de Rutas
-// Agrega CORS a tu aplicación
+// Middleware para manejar solicitudes JSON y de URL codificadas
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use('/', dataRoutes);
 
-// Puerto en el que el servidor escuchará las peticiones
-const puerto = 3000
+// Rutas de la API
+app.use('/api', dataRoutes); // Prefijo de ruta para las rutas de datos
 
-app.listen(puerto, () => {
-    console.log(`Servidor escuchando en http://localhost:${puerto}`);
+// Manejo de errores
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Server is running on port http://localhost:${PORT}`);
 });

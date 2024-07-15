@@ -1,5 +1,9 @@
 {
+  "name": "tu-proyecto",
+  "version": "1.0.0",
+  "type": "module",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "pool": "^0.4.1",
     "yarn": "^1.22.22"
