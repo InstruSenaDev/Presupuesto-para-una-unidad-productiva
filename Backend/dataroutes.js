@@ -1,7 +1,7 @@
 // Backend/routes/dataroutes.js
 import express from 'express';
-import {  getAllUsuario } from '../controllers/datacontroler.js';
-import { pool } from '../config/db.js';
+import {  getAllUsuario } from './datacontroler.js';
+import { pool } from './db.js';
 
 
 const router = express.Router();

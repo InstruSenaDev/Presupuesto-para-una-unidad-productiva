@@ -5,7 +5,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
     "pool": "^0.4.1",
+    "swagger-ui-express": "^5.0.1",
     "yarn": "^1.22.22"
   }
 }

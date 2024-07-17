@@ -7,7 +7,7 @@ const pool = new Pool({
     host: "aws-0-us-east-1.pooler.supabase.com",
     database: "postgres",
     password: "CalivsAmerica123",
-    port: 5432,
+    port: 6543,
 });
 
 export { pool };
